@@ -1,0 +1,90 @@
+﻿<MaterialDesing:Window xmlns:MaterialDesing="http://schemas.microsoft.com/netfx/2009/xaml/presentation" x:Class="ABCC_Articulos.Delete_Articulo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ABCC_Articulos"
+        mc:Ignorable="d"
+        Title="Add_Articulo" Height="450" WindowStyle="None" Width="800" AllowsTransparency="True" WindowStartupLocation="CenterScreen" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid>
+        <MaterialDesing:TabPanel Background="#FF6A32B6" Grid.ColumnSpan="3" Margin="0,0,0,390">
+        </MaterialDesing:TabPanel>
+        <Label Content="Eliminar Articulo" HorizontalAlignment="Left" Margin="257,-6,0,396" Width="310" FontFamily="Arial Rounded MT Bold" Background="Transparent" FontSize="36" FontWeight="Bold" Foreground="White" />
+
+        <Label Content="SKU" Margin="10,87,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="46" FontFamily="Arial" FontWeight="Bold" FontSize="16"></Label>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="88,93,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" RenderTransformOrigin="0.375,0.13" FontFamily="Arial" Name="Text_Sku" MouseLeave="Text_Sku_MouseLeave" FontSize="14" TextChanged="Text_Sku_TextChanged" MaxLength="6" InputScope="Default" PreviewTextInput="Text_Sku_PreviewTextInput"/>
+        <Label Content="Articulo" Margin="10,122,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="73" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Name="Text_Articulo" IsEnabled="False" Height="24" Margin="88,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" RenderTransformOrigin="0.375,0.13" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Marca" Margin="10,155,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="63" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Name="Text_Marca" IsEnabled="False" Height="24" Margin="88,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" RenderTransformOrigin="0.375,0.13" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Modelo" Margin="10,195,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="73" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Name="Text_Modelo" Height="24" IsEnabled="False" Margin="88,198,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="296" RenderTransformOrigin="0.375,0.13" FontFamily="Arial" FontSize="14"/>
+        <Label Content="Departamento" Margin="10,240,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="117" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Clase" Margin="10,289,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="73" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Familia" Margin="10,334,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="73" FontFamily="Arial" FontWeight="Bold" FontSize="16" RenderTransformOrigin="0.474,0.667"/>
+        <MaterialDesing:ComboBox Margin="136,240,416,180" IsEnabled="False" SelectionChanged="ComboBox_SelectionChanged" Name="Combo_Departamento" >
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFFFF8F8" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </MaterialDesing:ComboBox>
+        <MaterialDesing:ComboBox Margin="136,288,416,132" IsEnabled="False" SelectionChanged="ComboBox_SelectionChanged_1" Name="Combo_Clase">
+        </MaterialDesing:ComboBox>
+        <MaterialDesing:ComboBox Margin="136,334,416,86" IsEnabled="False" SelectionChanged="ComboBox_SelectionChanged_2" Name="Combo_Familia">
+        </MaterialDesing:ComboBox>
+        <MaterialDesing:CheckBox Margin="641,73,10,353" IsEnabled="False" Content="Descontinuado" Name="Check_Descontinuado" FontFamily="Arial" FontWeight="Bold" FontSize="16"></MaterialDesing:CheckBox>
+        <Label Content="Stock" Margin="488,119,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="55" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Cantidad" Margin="488,154,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="79" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Name="Text_Stock" IsEnabled="False" Height="24" Margin="572,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" RenderTransformOrigin="0.375,0.13" FontFamily="Arial" FontSize="14" PreviewTextInput="Text_Stock_PreviewTextInput"/>
+        <TextBox HorizontalAlignment="Left" Name="Text_Cantidad" Height="24" IsEnabled="False" Margin="572,157,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="204" RenderTransformOrigin="0.375,0.13" FontFamily="Arial" FontSize="14" PreviewTextInput="Text_Cantidad_PreviewTextInput"/>
+        <Label Content="Fecha Alta" Margin="488,202,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="89" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <MaterialDesing:DatePicker HorizontalAlignment="Left" IsEnabled="False" Margin="583,202,0,0" VerticalAlignment="Top" Width="182" FontFamily="Arial" FontSize="14" Name="Fecha_Alta" Height="24">
+        </MaterialDesing:DatePicker>
+        <Label Content="Fecha Baja" Margin="488,235,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="96" FontFamily="Arial" FontWeight="Bold" FontSize="16"/>
+        <MaterialDesing:DatePicker HorizontalAlignment="Left" IsEnabled="False" SelectedDate="1900-01-01" Margin="583,235,0,0" VerticalAlignment="Top" Width="182" FontFamily="Arial" FontSize="14" Name="Fecha_Baja" Height="24" DisplayDate="1900-01-01">
+        </MaterialDesing:DatePicker>
+        <Button Content="Eliminar" HorizontalAlignment="Left" IsEnabled="False" Margin="646,321,0,0" VerticalAlignment="Top" Width="126"  Height="34" Background="#FF963AB7" BorderBrush="#FF963AB7" Foreground="White" RenderTransformOrigin="0.5,0.5" Name="Button_Eliminar" Click="Button_Eliminar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.14"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.198"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content = "Regresar" HorizontalAlignment="Left" Name="Button_Regrsar" Margin="646,387,0,0" VerticalAlignment="Top" Width="126"  Height="34" Background="#FF963AB7" BorderBrush="#FF963AB7" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Button_Regrsar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.14"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.198"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content = "Buscar" HorizontalAlignment="Left" Name="Button_Buscar" Margin="467,323,0,0" VerticalAlignment="Top" Width="126"  Height="34" Background="#FF963AB7" BorderBrush="#FF963AB7" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Button_Buscar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.14"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.198"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content = "Limpiar" HorizontalAlignment="Left" Name="Button_Limpiar" Margin="466,387,0,0" VerticalAlignment="Top" Width="126"  Height="34" Background="#FF963AB7" BorderBrush="#FF963AB7" Foreground="White" RenderTransformOrigin="0.5,0.5" Click="Button_Limpiar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.14"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0.198"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+    </Grid>
+</MaterialDesing:Window>
